@@ -271,7 +271,7 @@ button:hover {
 
 
 .photo-card {
-    width: min(500px, 80vw);
+    width: min(650px, 85vw);
     position: relative;
     transform: rotate(-1deg);
     transition: 0.6s;
