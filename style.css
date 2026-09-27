@@ -288,11 +288,10 @@ button:hover {
 
 .photo-card img {
     width: 100%;
-    height: auto;
-    max-height: 450px;
-    object-fit: contain;
+    height: 400px;
     display: block;
     border-radius: 5px;
+    object-fit: cover;
     filter: brightness(0.8);
     box-shadow:
         0 30px 100px rgba(0,0,0,0.7);
