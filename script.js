@@ -1,12 +1,9 @@
 const openBtn = document.getElementById("openBtn");
-
 const opening = document.getElementById("opening");
-
 const mainContent = document.getElementById("mainContent");
-
 const music = document.getElementById("music");
-
 const typingText = document.getElementById("typingText");
+const heartsContainer = document.querySelector(".hearts");
 
 
 /* =========================
@@ -15,11 +12,15 @@ const typingText = document.getElementById("typingText");
 
 openBtn.addEventListener("click", () => {
 
+    // cinematic fade out
+    opening.style.transition =
+        "opacity 1.2s ease, transform 1.2s ease";
+
     opening.style.opacity = "0";
+    opening.style.transform = "scale(1.04)";
 
-    opening.style.transform = "scale(1.05)";
-
-    opening.style.transition = "1s ease";
+    // coba mulai musik
+    music.play().catch(() => {});
 
     setTimeout(() => {
 
@@ -27,13 +28,14 @@ openBtn.addEventListener("click", () => {
 
         mainContent.classList.remove("hidden");
 
-        window.scrollTo(0, 0);
-
-        music.play().catch(() => {});
+        window.scrollTo({
+            top: 0,
+            behavior: "instant"
+        });
 
         typeWriter();
 
-    }, 900);
+    }, 1200);
 
 });
 
@@ -45,9 +47,7 @@ openBtn.addEventListener("click", () => {
 const message =
     "thank you for being a beautiful part of my life.";
 
-
 let index = 0;
-
 
 function typeWriter() {
 
@@ -68,10 +68,6 @@ function typeWriter() {
 /* =========================
    FLOATING HEARTS
 ========================= */
-
-const heartsContainer =
-    document.querySelector(".hearts");
-
 
 function createHeart() {
 
