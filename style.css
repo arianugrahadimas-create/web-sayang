@@ -287,9 +287,6 @@ button:hover {
     display: block;
     border-radius: 5px;
     object-fit: cover;
-    filter: brightness(0.8);
-    box-shadow:
-        0 30px 100px rgba(0,0,0,0.7);
 }
 
 .photo-overlay {
