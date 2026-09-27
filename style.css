@@ -249,7 +249,7 @@ button:hover {
 /* FOTO */
 
 .photo-card {
-    width: min(450px, 80vw);
+    width: min(300px, 80vw);
 
     position: relative;
 
